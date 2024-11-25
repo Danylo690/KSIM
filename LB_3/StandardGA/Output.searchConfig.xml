@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE search SYSTEM "behaviorsearch.dtd">
+<search>
+    <bsearchVersionNumber>1.10</bsearchVersionNumber>
+    <modelInfo>
+        <modelFile>E:\Programs\NetLogo 6.4.0\models\IABM Textbook\chapter 3\Fire Extensions\Fire Simple Extension 2.nlogo</modelFile>
+        <modelSetupCommands>setup</modelSetupCommands>
+        <modelStepCommands>go</modelStepCommands>
+        <modelStopCondition/>
+        <modelStepLimit>100</modelStepLimit>
+        <modelMetricReporter>((count patches with [shade-of? pcolor red]) / initial-trees) * 100</modelMetricReporter>
+        <modelMeasureIf>true</modelMeasureIf>
+    </modelInfo>
+    <fitnessInfo>
+        <fitnessMinimized>true</fitnessMinimized>
+        <fitnessCollecting>AT_FINAL_STEP</fitnessCollecting>
+        <fitnessSamplingReplications>10</fitnessSamplingReplications>
+        <fitnessCombineReplications>MEAN</fitnessCombineReplications>
+    </fitnessInfo>
+    <searchSpace>
+        <paramSpec>["density" [40 1 100]]</paramSpec>
+        <paramSpec>["probability-of-spread" [40 1 100]]</paramSpec>
+        <paramSpec>["south-wind-speed" [5 1 25]]</paramSpec>
+        <paramSpec>["west-wind-speed" [5 1 25]]</paramSpec>
+    </searchSpace>
+    <searchMethod type="StandardGA">
+        <searchMethodParameter name="mutation-rate" value="0.01"/>
+        <searchMethodParameter name="population-size" value="50"/>
+        <searchMethodParameter name="tournament-size" value="3"/>
+        <searchMethodParameter name="population-model" value="generational"/>
+        <searchMethodParameter name="crossover-rate" value="0.7"/>
+    </searchMethod>
+    <chromosomeRepresentation type="StandardBinaryChromosome"/>
+    <caching>true</caching>
+    <evaluationLimit>300</evaluationLimit>
+    <bestCheckingNumReplications>0</bestCheckingNumReplications>
+</search>
